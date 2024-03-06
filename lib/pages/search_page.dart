@@ -10,11 +10,13 @@ class SearchPage extends StatelessWidget {
 
   String? cityName;
 
+  SearchPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Search a City'),
+        title: const Text('Search a City'),
       ),
       body: Center(
         child: Padding(
@@ -32,7 +34,7 @@ class SearchPage extends StatelessWidget {
             },
             decoration: InputDecoration(
               contentPadding: const EdgeInsets.symmetric(vertical: 32, horizontal: 24),
-              label: Text('search'),
+              label: const Text('search'),
               suffixIcon: GestureDetector(
                 
                 onTap : () async 
@@ -47,8 +49,8 @@ class SearchPage extends StatelessWidget {
 
               Navigator.pop(context);
                 },
-                child: Icon(Icons.search)),
-              border: OutlineInputBorder(),
+                child: const Icon(Icons.search)),
+              border: const OutlineInputBorder(),
               hintText: 'Enter a city',
             ),
           ),

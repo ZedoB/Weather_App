@@ -1,19 +1,17 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:provider/provider.dart';
 import 'package:weather_app/cubits/weather_cubit/weather_cubit.dart';
 import 'package:weather_app/cubits/weather_cubit/weather_state.dart';
-import 'package:weather_app/main.dart';
 import 'package:weather_app/models/weather_model.dart';
 import 'package:weather_app/pages/search_page.dart';
-import 'package:weather_app/providers/weather_provider.dart';
 
 
 
 class HomePage extends StatelessWidget {
 
   WeatherModel? weatherData;
+
+  HomePage({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
 
@@ -43,7 +41,7 @@ class HomePage extends StatelessWidget {
             return const Center(child: Text('Something went wrong'),);
           }
           else{
-            return Default();
+            return const Default();
           }
         },
       )
