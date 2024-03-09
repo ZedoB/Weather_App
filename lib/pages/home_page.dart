@@ -106,9 +106,7 @@ class Success extends StatelessWidget {
             flex: 3,
           ),
           Text(
-            BlocProvider
-                .of<WeatherCubit>(context)
-                .cityName!,
+            BlocProvider.of<WeatherCubit>(context).cityName!,
             style: const TextStyle(
               fontSize: 32,
               fontWeight: FontWeight.bold,
